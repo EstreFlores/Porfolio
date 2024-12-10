@@ -1,0 +1,16 @@
+/* Certificados.css */
+.certificados {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .certificado-item {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  

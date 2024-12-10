@@ -1,0 +1,16 @@
+/* Home.css */
+.home {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .home-title {
+    font-size: 3rem;
+    color: var(--primary-color);
+  }
+  
+  .home-description {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  

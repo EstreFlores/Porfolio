@@ -1,0 +1,14 @@
+@keyframes words { 
+    0%, 50% {
+        content: 'Ingeniero en Sistemas Computacionales';
+    }
+    51%, 100% {
+        content: 'Desarrolladora Front-end';
+    }
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid var(--main-color);
+    }
+}

@@ -1,0 +1,33 @@
+/* Footer.css */
+.footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+
+
+  /* Estilos para el footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: #66bb6a;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
