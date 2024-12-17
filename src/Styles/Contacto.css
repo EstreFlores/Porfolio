@@ -1,62 +1,139 @@
-/* Contacto.css */
+/* Contenedor principal de la sección */
 .contacto {
-    padding: 40px;
-    text-align: center;
-  }
-  
-  .contacto form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .contacto input,
-  .contacto textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-
-
-  /* Estilos para la sección de contacto */
-#contacto {
-  padding: 60px 15px;
-  background-color: #e0f7fa;
+  background-color: var(--second-bg-color); /* Fondo de la sección */
+  padding: 4rem 1rem; /* Espaciado general */
 }
 
-#contacto h2 {
-  text-align: center;
-  color: #00796b;
-  font-size: 30px;
+/* Estilo del heading */
+.heading {
+  padding: 3rem 1rem; /* Espaciado interno */
 }
 
-#contacto form {
+/* Título con texto de dos colores */
+.heading h2 {
+  margin: 1rem auto; /* Centrado vertical */
+  text-align: center; /* Centrado horizontal */
+  margin-bottom: 3rem; /* Separación inferior */
+  font-size: 2.8rem; /* Tamaño del texto */
+  color: var(--text-color); /* Color base del texto */
+  line-height: 1.5; /* Espaciado entre líneas */
+}
+
+/* Color del texto destacado */
+.heading h2 span {
+  color: var(--highlight-color); /* Color de "Estrella" */
+  font-weight: bold; /* Resaltado */
+}
+
+/* Estilo del formulario */
+.heading form {
+  max-width: 600px; /* Limita el ancho máximo del formulario */
+  margin: 0 auto; /* Centrado horizontal */
+}
+
+/* Contenedor de campos del formulario */
+.heading form .input-box {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 600px;
-  margin: 0 auto;
+  justify-content: center;
+  flex-wrap: wrap; /* Acomoda en varias filas */
 }
 
-#contacto input, #contacto textarea {
+/* Campos de entrada y área de texto */
+.heading form .input-box input,
+.heading form textarea {
+  width: 100%; /* Ancho completo */
+  padding: 1.5rem; /* Espaciado interno */
+  font-size: 1.6rem; /* Tamaño del texto */
+  color: var(--text-color); /* Color del texto */
+  background: var(--bg-color); /* Fondo de los campos */
+  border-radius: 0.8rem; /* Bordes redondeados */
+  border: 2px solid var(--main-color); /* Borde principal */
+  margin: 1rem 0; /* Margen vertical */
+  resize: none; /* Desactiva el redimensionamiento */
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* Interacción con campos del formulario */
+.heading form .input-box input:focus,
+.heading form textarea:focus {
+  border-color: var(--highlight-color); /* Cambia el color del borde al interactuar */
+  outline: none; /* Elimina el borde predeterminado */
+}
+
+/* Botón de envío */
+.heading form .btn {
+  margin-top: 2rem;
+  display: block; /* Ocupa todo el ancho disponible */
+  width: 100%; /* Ajusta el ancho al contenedor */
+  max-width: 200px; /* Tamaño máximo del botón */
+  padding: 1rem 2rem; /* Espaciado interno */
+  font-size: 1.6rem; /* Tamaño del texto */
+  margin: 2rem auto 0; /* Centrado del botón */
+  background-color: var(--main-color); /* Fondo del botón */
+  color: white; /* Color del texto */
+  border: none; /* Sin bordes adicionales */
+  border-radius: 0.8rem; /* Bordes redondeados */
+  cursor: pointer; /* Icono de puntero */
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Hover en el botón */
+.heading form .btn:hover {
+  transform: scale(1.08); /* Efecto de aumento */
+  background-color: var(--highlight-color); /* Color destacado */
+}
+
+/* Estilo para la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+}
+
+
+.contacto {
+  background-color: var(--second-bg-color);
+  padding: 3rem 1rem;
+}
+
+.contacto h2 {
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contacto form {
+  max-width: 600px; /* Limita el ancho máximo del formulario */
+  margin: 0 auto;  /* Centra el formulario horizontalmente */
+}
+
+.contacto form .input-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contacto form .input-box input,
+.contacto form textarea {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
-  border: 1px solid #00796b;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--bg-color);
+  border-radius: 0.8rem;
+  border: 2px solid var(--main-color);
+  margin: 1rem 0;
+  resize: none;
 }
 
-#contacto button {
-  background-color: #00796b;
-  color: white;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#contacto button:hover {
-  background-color: #004d40;
+.contacto form .btn {
+  margin-top: 2rem;
+  display: block; /* Cambia a bloque para que tome todo el ancho disponible */
+  width: 100%; /* Ajusta el ancho del botón al contenedor */
+  max-width: 200px; /* Limita el ancho máximo del botón */
+  margin: 2rem auto 0; /* Centra el botón */
 }

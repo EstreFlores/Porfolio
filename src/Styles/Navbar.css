@@ -12,3 +12,12 @@
     color: var(--main-color);
     border-bottom: 3px solid var(--main-color);
 }
+
+
+
+
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 10rem;
+}

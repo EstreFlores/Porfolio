@@ -1,18 +1,153 @@
-/* Proyectos.css */
 .proyectos {
-    padding: 50px;
-  }
+  background-color: var(--second-bg-color);
+  color: white;
+  padding: 10rem 9%;
+}
+
+.proyecto-container {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+
+.proyecto {
+  background-color: var(--bg-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave predeterminada */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza el brillo */
+  width: 30%; /* Ajusta el ancho de cada proyecto según tu diseño */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de brillo al hacer hover */
+.proyecto:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 50px var(--main-color), 0 0 100px var(--main-color);
+}
+
+.proyecto-info {
+  text-align: center;
+  position: relative; /* Asegura que el pseudo-elemento ::before no interfiera */
+  z-index: 1; /* Coloca el contenido por encima del pseudo-elemento */
+}
+
+.proyecto h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.proyecto p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+/* Estilo general para las imágenes de fondo */
+.proyecto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.4;
+  z-index: -1;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Clases específicas para cada proyecto */
+.proyecto-spotify::before {
+  background-image: url('../assets/img/spotify.png');
+}
+
+.proyecto-estilos::before {
+  background-image: url('../assets/img/estilos.png');
+}
+
+.proyecto-reffindr::before {
+  background-image: url('../assets/img/reffindr.png');
+}
+
+.proyecto-gifs::before {
+  background-image: url('../assets/img/misgifs.png');
+}
+
+.proyecto-btns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+
+.btn-demo, .btn-codigo {
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  background: var(--main-color);
+  color: white;
+  border-radius: 4rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid transparent; /* Agregado */
+  letter-spacing: 0.1rem; /* Agregado */
+  z-index: 1; /* Asegurar que los botones estén por encima del pseudo-elemento */
+}
+
+.btn-demo i, .btn-codigo i {
+  margin-right: 0.5rem;
+}
+
+.btn-demo:hover, .btn-codigo:hover {
+  background: var(--main-color-hover);
+  transform: scale(1.05); /* Agregado */
+  box-shadow: 0 0 25px var(--main-color); /* Agregado */
   
-  .proyecto-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .proyecto-card img {
-    width: 100%;
-    height: auto;
-  }
-  
+}
+
+.btn-demo::before, .btn-codigo::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+.btn-demo:hover::before, .btn-codigo:hover::before {
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+   box-shadow: 0 0 50px var(--main-color), 0 0 100px var(--main-color);
+}
+
+.btn-demo span, .btn-codigo span {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 10rem;
+}
+
+

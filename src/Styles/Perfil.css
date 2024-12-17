@@ -22,3 +22,12 @@
     font-size: 18px;
     text-align: center;
 }
+
+
+
+
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 10rem;
+}

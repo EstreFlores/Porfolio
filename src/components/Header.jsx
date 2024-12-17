@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import '.Styles/Header.css'; // Importando el archivo CSS para el encabezado
+import '../Styles/Agradecimiento.module.css'; 
+import '../Styles/Header.css'; 
+
 
 
 function Header() {
@@ -25,3 +27,6 @@ function Header() {
 }
 
 export default Header;
+
+
+

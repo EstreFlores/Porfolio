@@ -1,3 +1,61 @@
+/* Estilos generales */
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 10rem;
+}
+
+.text-animation {
+  font-size: 34px;
+  font-weight: 600;
+  min-width: 280px;
+}
+
+.text-animation span {
+  position: relative;
+}
+
+.text-animation span::before {
+  content: 'Ingeniero en Sistemas Computacionales';
+  color: var(--main-color);
+  animation: words 10s infinite;
+}
+
+.text-animation span::after {
+  content: "";
+  background-color: var(--bg-color);
+  position: absolute;
+  width: calc(100% + 8px);
+  height: 100%;
+  border-left: 3px solid var(--bg-color);
+  right: -8px;
+  animation: cursor 0.6s infinite, typing 10s steps(14) infinite;
+}
+
+@keyframes cursor {
+  to {
+    border-left: 2px solid var(--main-color);
+  }
+}
+
+@keyframes words {
+  0%, 50% {
+    content: 'Ingeniero en Sistemas Computacionales';
+  }
+  51%, 100% {
+    content: 'Desarrolladora Front-end';
+  }
+}
+
+@keyframes typing {
+  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+    width: 0;
+  }
+  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+    width: calc(100% + 8px);
+  }
+}
+
+/* Sección Sobre Mí */
 .sobremi {
   display: flex;
   justify-content: center;
@@ -7,7 +65,303 @@
   color: white;
 }
 
+.sobremi-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.sobremi h2 span {
+  color: var(--main-color);
+  text-shadow: 0 0 50px var(--main-color);
+}
+
+.sobremi-img {
+  border-radius: 50%;
+}
+
+.sobremi-img img {
+  position: relative;
+  width: 32vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  top: 1rem;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
 .sobremi-img img:hover {
   box-shadow: 0 0 50px var(--main-color),
               0 0 100px var(--main-color);
+}
+
+/* Sección Perfil */
+#perfil-content {
+  display: none; /* Oculto por defecto */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+#perfil-content p {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+/* Sección Estudios */
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+}
+
+.timeline-item h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.timeline-item p {
+  margin: 5px 0 0;
+  color: #555;
+}
+
+/* Estilo de botones */
+buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Contenido general */
+#content {
+  margin-top: 2rem;
+}
+
+
+
+.heading {
+  text-align: left;
+  font-size: 8rem;
+}
+
+
+
+
+.sobremi-content .text-content {
+  text-align: left;
+}
+
+.sobremi-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.timeline {
+  position: relative;
+  margin: 20px 0;
+  padding:0;
+  list-style: none;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+  width: 2px;
+  background:  #ea63d8f0;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 20px 0;
+  padding: 20px 100px;
+  background:  #ea63d8f0;
+  border-radius: 8px;
+}
+
+.timeline-item:before {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  margin-left: -8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #101010;
+  z-index: 1;
+}
+
+.timeline-item h4 {
+  margin: 0;
+  padding-bottom: 5px;
+  font-size: 18px;
+}
+
+.timeline-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* estos son los estilos que estan dentro de la seccion de sobre mi, "skills" */
+/* SECTION-SKILLS */
+.text-info {
+  text-align: center;
+  margin: 30px auto 40px auto;
+  padding: 0 35px;
+  max-width: 70%;
+  color: #ff66cc; /* Color rosa brilloso */
+  text-shadow: 0 0 10px rgba(255, 102, 204, 0.8), 
+               0 0 20px rgba(255, 102, 204, 0.6);
+}
+
+.infoh2 {
+  text-align: center;
+  background: linear-gradient(to right, #ff66cc, #ff1493); /* Gradiente rosa */
+  font-weight: 700;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 0 10px rgba(255, 102, 204, 0.8),
+               0 0 20px rgba(255, 102, 204, 0.6); /* Sombra brillante */
+}
+
+.text-lenguagues {
+  font-size: 1.25rem;
+  color: #ff66cc; /* Rosa brilloso */
+  text-shadow: 0 0 10px rgba(255, 102, 204, 0.8),
+               0 0 20px rgba(255, 102, 204, 0.6); /* Efecto glow */
+}
+
+.skills-tech {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 40px;
+}
+
+.skill {
+  box-shadow: 1px 1px 15px 5px rgba(255, 102, 204, 0.8); /* Rosa brillante */
+  background-color: #212124;
+  border-radius: 10px;
+  padding: 1em;
+  text-align: center;
+  height: 140px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 102, 204, 1),
+              0 0 40px rgba(255, 102, 204, 0.8);
+}
+
+.skill h3 {
+  font-size: 17px;
+  color: #ff66cc; /* Rosa brilloso */
+  margin: 10px 0;
+  text-shadow: 0 0 10px rgba(255, 102, 204, 0.8), 
+               0 0 20px rgba(255, 102, 204, 0.6);
+}
+
+.icons-languagues i {
+  color: #ff66cc; /* Rosa brilloso */
+  font-size: 50px;
+  text-shadow: 0 0 10px rgba(255, 102, 204, 0.8), 
+               0 0 20px rgba(255, 102, 204, 0.6); /* Efecto glow */
+}
+
+.lenguagues {
+  margin: 0 auto;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.tech-categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px; /* Ajusta el espaciado entre categorías */
+}
+
+.category {
+  text-align: center;
+  margin-bottom: 50px; /* Separación entre cada categoría */
+}
+
+.category h2 {
+  color: #ff66cc; /* El mismo color rosa brilloso */
+  text-shadow: 0 0 10px rgba(255, 102, 204, 0.8),
+               0 0 20px rgba(255, 102, 204, 0.6); /* Sombra de texto */
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+
+
+/* Estilos para las habilidades */
+.skills-tech {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Ajustable según el espacio disponible */
+  gap: 20px;
+  justify-items: center;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.skill {
+  box-shadow: 1px 1px 15px 5px rgba(255, 102, 204, 0.8);
+  background-color: #212124;
+  border-radius: 10px;
+  padding: 1em;
+  text-align: center;
+  height: auto; /* Adaptable al contenido */
+  width: 120px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 102, 204, 1),
+              0 0 40px rgba(255, 102, 204, 0.8);
+}
+
+.skill img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain; /* Ajusta la imagen al tamaño del contenedor */
+  margin-bottom: 10px;
+}
+
+.skill h3 {
+  font-size: 15px;
+  color: #ff66cc;
+  margin: 10px 0 0 0;
+  text-shadow: 0 0 10px rgba(255, 102, 204, 0.8),
+               0 0 20px rgba(255, 102, 204, 0.6);
 }

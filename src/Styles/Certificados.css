@@ -1,16 +1,134 @@
-/* Certificados.css */
-.certificados {
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+/* Estilo para la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--bg-color);
+}
+
+/* Estilo principal para los certificados */
+.certi {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 8rem;
+}
+
+/* Contenedor principal de certificados */
+.certificados-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Carrusel de certificados */
+.certificados-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  height: 250px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Slider que contiene las imágenes */
+.slider {
+  display: flex;
+  width: calc(100% * 4); /* Ajustar según el número de imágenes */
+  animation: slide 25s infinite linear;
+}
+
+/* Imágenes del slider */
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+  border-radius: 4rem;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efecto hover para las imágenes del carrusel */
+.slider img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--main-color);
+}
+
+/* Animación para deslizar las imágenes */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
   }
-  
-  .certificado-item {
-    width: 200px;
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Estilo responsivo para carrusel */
+@media (max-width: 768px) {
+  .certificados-carousel {
     height: 200px;
-    overflow: hidden;
-    border-radius: 5px;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .certificados-carousel {
+    height: 150px;
+  }
+}
+
+/* Lista de certificados */
+.certificates-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+
+.certificates-list li {
+  list-style: none;
+  min-width: 250px;
+  background-color: #212124;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 102, 204, 0.8);
+  margin-bottom: 20px;
+}
+
+.certificates-list h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.certificates-list p {
+  margin: 5px 0 0;
+  color: #555;
+}
+
+/* Sección general */
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 10rem;
+}
+
+#content {
+  margin-top: 2rem;
+}
