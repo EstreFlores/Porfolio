@@ -4,7 +4,7 @@ import '../Styles/Proyectos.css';
 
 function Proyectos() {
     return (
-        <section class="proyectos" id="proyectos">
+    <section class="proyectos" id="proyectos">
     <h2 class="heading">Mis <span>Proyectos</span></h2>
     <div class="proyecto-container">
         <div class="proyecto proyecto-spotify">

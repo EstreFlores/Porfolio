@@ -1,22 +1,25 @@
-/* Estilo para la barra de desplazamiento */
+/* ... (Estilos generales, header, home, sobremi, proyectos, etc.) */
+
+/* Estilo para la barra de desplazamiento (se mantiene igual) */
 ::-webkit-scrollbar {
   width: 15px;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
 }
+
 ::-webkit-scrollbar-track {
   background-color: var(--bg-color);
 }
 
-/* Estilo principal para los certificados */
-.certi {
-  text-align: center;
-  margin: 0 auto;
-  font-size: 8rem;
+/* Certificados */
+.certificados { /* Cambiado a .certificados para consistencia */
+  background-color: var(--bg-color); /* Usa el color de fondo correspondiente */
+  color: white;
+  padding: 10rem 9%; /* Mismo padding que otras secciones */
 }
 
-/* Contenedor principal de certificados */
 .certificados-container {
   display: flex;
   justify-content: center;
@@ -25,7 +28,12 @@
   width: 100%;
 }
 
-/* Carrusel de certificados */
+.certi { /* Estilo para el encabezado "Certificados" */
+  text-align: center;
+  margin-bottom: 3rem; /* Espacio debajo del título */
+  font-size: 8rem;
+}
+
 .certificados-carousel {
   display: flex;
   justify-content: center;
@@ -38,14 +46,12 @@
   position: relative;
 }
 
-/* Slider que contiene las imágenes */
 .slider {
   display: flex;
-  width: calc(100% * 4); /* Ajustar según el número de imágenes */
+  width: calc(100% * 4);
   animation: slide 25s infinite linear;
 }
 
-/* Imágenes del slider */
 .slider img {
   width: 100%;
   height: 100%;
@@ -55,45 +61,42 @@
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Efecto hover para las imágenes del carrusel */
 .slider img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 25px var(--main-color);
 }
 
-/* Animación para deslizar las imágenes */
 @keyframes slide {
   0% {
-    transform: translateX(0);
+      transform: translateX(0);
   }
   25% {
-    transform: translateX(-100%);
+      transform: translateX(-100%);
   }
   50% {
-    transform: translateX(-200%);
+      transform: translateX(-200%);
   }
   75% {
-    transform: translateX(-300%);
+      transform: translateX(-300%);
   }
   100% {
-    transform: translateX(0);
+      transform: translateX(0);
   }
 }
 
-/* Estilo responsivo para carrusel */
 @media (max-width: 768px) {
   .certificados-carousel {
-    height: 200px;
+      height: 200px;
   }
 }
 
 @media (max-width: 480px) {
   .certificados-carousel {
-    height: 150px;
+      height: 150px;
   }
 }
 
-/* Lista de certificados */
+/* Lista de certificados (si la necesitas además del carrusel) */
 .certificates-list {
   display: flex;
   overflow-x: auto;
@@ -122,6 +125,8 @@
   margin: 5px 0 0;
   color: #555;
 }
+
+/* ... (resto de los estilos: contacto, footer, media queries, etc.) */
 
 /* Sección general */
 section {

@@ -1,3 +1,46 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #111111;
+  --second-bg-color: #151515;
+  --text-color: white;
+  --main-color: #ea63d8f0;
+  --main-color-hover: #d447c2; /* Agregado color hover para los botones */
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 10rem;
+}
+
+.heading {
+  text-align: left;
+  font-size: 8rem;
+}
+
+/* ... (resto de los estilos: header, home, sobremi, etc.) */
+
+/* Proyectos */
 .proyectos {
   background-color: var(--second-bg-color);
   color: white;
@@ -16,14 +59,13 @@
   background-color: var(--bg-color);
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave predeterminada */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza el brillo */
-  width: 30%; /* Ajusta el ancho de cada proyecto según tu diseño */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 30%;
   position: relative;
   overflow: hidden;
 }
 
-/* Efecto de brillo al hacer hover */
 .proyecto:hover {
   transform: translateY(-10px);
   box-shadow: 0 0 50px var(--main-color), 0 0 100px var(--main-color);
@@ -31,8 +73,8 @@
 
 .proyecto-info {
   text-align: center;
-  position: relative; /* Asegura que el pseudo-elemento ::before no interfiera */
-  z-index: 1; /* Coloca el contenido por encima del pseudo-elemento */
+  position: relative;
+  z-index: 1;
 }
 
 .proyecto h3 {
@@ -45,7 +87,6 @@
   margin-bottom: 2rem;
 }
 
-/* Estilo general para las imágenes de fondo */
 .proyecto::before {
   content: "";
   position: absolute;
@@ -60,7 +101,7 @@
   background-position: center;
 }
 
-/* Clases específicas para cada proyecto */
+/* Clases específicas para imágenes de proyectos - Usa rutas relativas correctas */
 .proyecto-spotify::before {
   background-image: url('../assets/img/spotify.png');
 }
@@ -83,9 +124,8 @@
   gap: 1rem;
 }
 
-
-
-.btn-demo, .btn-codigo {
+.btn-demo,
+.btn-codigo {
   display: inline-block;
   padding: 0.8rem 2.5rem;
   background: var(--main-color);
@@ -98,23 +138,25 @@
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  border: 2px solid transparent; /* Agregado */
-  letter-spacing: 0.1rem; /* Agregado */
-  z-index: 1; /* Asegurar que los botones estén por encima del pseudo-elemento */
+  border: 2px solid transparent;
+  letter-spacing: 0.1rem;
+  z-index: 1;
 }
 
-.btn-demo i, .btn-codigo i {
+.btn-demo i,
+.btn-codigo i {
   margin-right: 0.5rem;
 }
 
-.btn-demo:hover, .btn-codigo:hover {
-  background: var(--main-color-hover);
-  transform: scale(1.05); /* Agregado */
-  box-shadow: 0 0 25px var(--main-color); /* Agregado */
-  
+.btn-demo:hover,
+.btn-codigo:hover {
+  background: var(--main-color-hover); /* Usa la variable de hover */
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--main-color);
 }
 
-.btn-demo::before, .btn-codigo::before {
+.btn-demo::before,
+.btn-codigo::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -128,26 +170,17 @@
   transform: translate(-50%, -50%);
 }
 
-.btn-demo:hover::before, .btn-codigo:hover::before {
+.btn-demo:hover::before,
+.btn-codigo:hover::before {
   width: 0;
   height: 0;
-  top: 50%;
-  left: 50%;
-   box-shadow: 0 0 50px var(--main-color), 0 0 100px var(--main-color);
+  box-shadow: 0 0 50px var(--main-color), 0 0 100px var(--main-color);
 }
 
-.btn-demo span, .btn-codigo span {
+.btn-demo span,
+.btn-codigo span {
   position: relative;
   z-index: 1;
 }
 
-
-
-
-
-section {
-  min-height: 100vh;
-  padding: 10rem 9% 10rem;
-}
-
-
+/* ... (resto de los estilos: certificados, contacto, footer, media queries, etc.) */
